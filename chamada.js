@@ -53,7 +53,7 @@ function removerAluno(index) {
 // Atualiza o status do aluno
 function atualizarStatus(index, status) {
     alunos[index].status = status;
-    if (status !== "Foi Embora Mais Cedo") {
+    if (status !== "Foi  Mais") {
         alunos[index].horario = "";
     }
     atualizarLista();
@@ -86,8 +86,8 @@ function atualizarLista() {
                     <input type="radio" name="status-${index}" ${aluno.status === "Faltou" ? "checked" : ""} onclick="atualizarStatus(${index}, 'Faltou')"> Faltou
                 </label>
                 <label>
-                    <input type="radio" name="status-${index}" ${aluno.status === "Foi Embora Mais Cedo" ? "checked" : ""} onclick="atualizarStatus(${index}, 'Foi Embora Mais Cedo')"> Foi Embora Mais Cedo
-                    ${aluno.status === "Foi Embora Mais Cedo" ? `<input type="time" value="${aluno.horario}" onchange="definirHorario(${index}, this.value)">` : ""}
+                    <input type="radio" name="status-${index}" ${aluno.status === "Foi Embora" ? "checked" : ""} onclick="atualizarStatus(${index}, 'Foi Embora')"> Foi Embora
+                    ${aluno.status === "Foi Embora" ? `<input type="time" value="${aluno.horario}" onchange="definirHorario(${index}, this.value)">` : ""}
                 </label>
                 <button onclick="removerAluno(${index})">Remover</button>
             </div>
