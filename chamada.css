@@ -1,0 +1,243 @@
+/* chamada.css */
+
+/* Fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: linear-gradient(180deg, #e0f7fa, #4a90e2);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+/* Header e Seleção de Turma */
+.header {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #4a90e2;
+    border-radius: 8px;
+    background: #fff;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Lista de Chamada */
+.lista-container {
+    background-color: #ffffff;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 20px auto;
+}
+
+.lista-container h2 {
+    color: #4a90e2;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+/* Itens da Lista */
+.lista ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.lista li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: linear-gradient(90deg, #e3f2fd, #bbdefb);
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+/* Adição de Aluno */
+.add-aluno {
+    display: flex;
+    margin-top: 15px;
+    gap: 5px;
+}
+
+.add-aluno input {
+    flex: 1;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #4a90e2;
+}
+
+.add-aluno button {
+    padding: 8px 15px;
+    font-size: 16px;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-aluno button:hover {
+    background-color: #357ab7;
+}
+
+/* Informações de Professores e Matérias */
+.info-aulas {
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 15px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center; /* Centraliza o conteúdo interno */
+    margin: 20px auto; /* Centraliza o bloco ao meio */
+}
+
+.info-aulas h3, .info-aulas h4 {
+    color: #4a90e2;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Adição de Professor e Matéria */
+.add-professor, .add-materia {
+    display: flex;
+    justify-content: center; /* Centraliza os inputs e botões */
+    margin-top: 10px;
+    gap: 5px;
+}
+
+.add-professor input, .add-materia input {
+    flex: 1;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #4a90e2;
+}
+
+.add-professor button, .add-materia button {
+    padding: 8px 15px;
+    font-size: 16px;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-professor button:hover, .add-materia button:hover {
+    background-color: #357ab7;
+}
+
+/* Tabela de Horários */
+.horarios {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.horarios li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    font-weight: 300;
+    color: #4a90e2;
+}
+
+.horarios li span {
+    flex: 1;
+}
+
+/* Botão de Remoção */
+.horarios li button {
+    margin-left: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.horarios li button:hover {
+    background-color: darkred;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .lista-container, .info-aulas {
+        width: 90%;
+    }
+
+    .decorative-image {
+        width: 80px;
+    }
+}
+
+/* Imagem decorativa centralizada */
+.decorative-image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.decorative-image {
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.decorative-image:hover {
+    transform: scale(1.05);
+}
+
+/* Animação para troca de turma */
+.lista-container {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.lista-container.show {
+    opacity: 1;
+}

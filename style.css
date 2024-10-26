@@ -1,0 +1,104 @@
+/* style.css */
+
+/* Fundo com degradê azul e branco */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4a90e2, #ffffff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    width: 600px;
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.image-container {
+    width: 220px;
+    background-color: #4a90e2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container img {
+    width: 180px;
+    border-radius: 10px 0 0 10px;
+}
+
+.form-container {
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4a90e2;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #357ABD;
+}
+
+p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+p a {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Deixa os tamanhos das telas iguais */
+.container {
+    width: 600px;
+    height: 400px; /* Define a mesma altura para as duas telas */
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Animação de transição */
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 0.5s forwards;
+}
+
+@keyframes fadeInAnimation {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* fim

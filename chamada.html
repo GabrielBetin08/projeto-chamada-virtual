@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Chamada Escolar</title>
+    <link rel="stylesheet" href="chamada.css">
+    <link rel="icon" href="pranchetas.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Imagem decorativa centralizada -->
+        <div class="decorative-image-container">
+            <img src="Floating Robot-Photoroom.png" alt="Decorative Image" class="decorative-image">
+        </div>
+
+        <!-- Seleção de Turma -->
+        <div class="header">
+            <label for="turma">Selecione a Turma:</label>
+            <select id="turma" onchange="trocarTurma()">
+                <option value="2A">2A</option>
+                <option value="2B">2B</option>
+                <option value="2C">2C</option>
+                <option value="2D">2D</option>
+            </select>
+        </div>
+
+        <!-- Lista de Chamada e Informações -->
+        <div class="content">
+            <div class="lista-container" id="listaContainer">
+                <h2>Lista de Chamada</h2>
+                <div class="lista">
+                    <ul id="alunosList">
+                        <!-- Alunos serão listados aqui -->
+                    </ul>
+                    <div class="add-aluno">
+                        <input type="text" id="novoAluno" placeholder="Nome do Aluno">
+                        <button onclick="adicionarAluno()">Adicionar Aluno</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-aulas">
+                <h3>Informações do Professor, Matéria e Horários</h3>
+                
+                <!-- Adição de Professor -->
+                <div class="add-professor">
+                    <input type="text" id="nomeProfessor" placeholder="Nome do Professor">
+                    <button onclick="adicionarProfessor()">Adicionar Professor</button>
+                </div>
+                
+                <!-- Adição de Matéria -->
+                <div class="add-materia">
+                    <input type="text" id="nomeMateria" placeholder="Nome da Matéria">
+                    <button onclick="adicionarMateria()">Adicionar Matéria</button>
+                </div>
+                
+                <h4>Horários das Aulas</h4>
+                <ul class="horarios" id="horariosList">
+                    <!-- Horários e professores serão listados aqui -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="chamada.js"></script>
+</body>
+</html>
